@@ -1,0 +1,42 @@
+Marius Valentin Iftimie, 323CD
+
+Homework - Sheriff of Nottingham
+
+Implementation of the game 'Sheriff of Nottingham' using OOP Concepts
+
+Rules of the game are adapted for the homework
+
+Game logic in code:
+-> Main class used for the initialization of the input data for the game
+-> Round represents the class where subRounds start
+-> SubRound represents the class where the following start:
+   -> Each player takes 10 goods
+   -> Each player adds to his bag the goods according to the strategy used
+   -> Each player declares the goods he added to his bag - honest or not
+   -> The sheriff checks the other players according to the strategy used
+-> The number of the SubRounds will always be the number of the players
+
+Important classes used:
+-> Package players
+   -> Player -> Abstract class
+             -> Includes general methods that should be used within
+                the Player subclasses - useful for different strategies
+      -> BasicPlayer -> Player subclass
+                     -> Player with a basic strategy
+                        -> Basic strategy
+         -> GreedyPlayer -> BasicPlayer subclass
+                         -> Player with a greedy strategy
+         -> BribedPlayer -> BasicPlayer subclass
+                         -> Player with a bribe strategy
+
+-> Package common
+   -> Constants -> Various constants used in the code
+   -> Bonus -> Various method used to calculate the final score
+
+-> Package rounds
+   -> Round -> Class that represents a round
+   -> SubRound -> Class that represents a subround
+
+-> Package main
+   -> Main -> Used to adapt the input data, run the rounds, add the bonuses,
+              sort the players by their score, and print them
